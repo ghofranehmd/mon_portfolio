@@ -1,23 +1,16 @@
 export const educationData = [
     {
         id: 1,
-        institution: 'Marble Hills Middle School',
-        course: 'Higher Secondary Education',
-        startYear: '2007',
-        endYear: '2015'
+        institution: 'Institut Supérieur d\'Informatique et des Technologies de la Communication de Hammam Sousse',
+        course: 'Licence en Science de l\'Informatique - Informatique et Multimédia',
+        startYear: '2023',
+        endYear: '2026'
     },
     {
         id: 2,
-        institution: 'Somerset School of Science',
-        course: 'Bachelor of Technology',
-        startYear: '2015',
-        endYear: '2019'
-    },
-    {
-        id: 3,
-        institution: 'Hawking University, Cambridge',
-        course: 'Master of Technology',
+        institution: 'Lycée secondaire Ibn Al Jazzar - Kairouan',
+        course: 'Baccalauréat Sciences Expérimentales',
         startYear: '2019',
-        endYear: 'Present'
-    },
+        endYear: '2023'
+    }
 ]

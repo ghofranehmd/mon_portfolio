@@ -1,6 +1,9 @@
 export const aboutData = {
-    title: "Who I am",
-    description1: "My name's Jane. I'm a web designer and developer based in Southampton, UK.",
-    description2: "During the day I work as a lead developer at a local agency and in the evening I  work on freelance projects and utilize the time to built my own products. I spent my leisure hours writing articles and poetry. Right now I'm also trying a hand at machine learning and AI. I love to learn and explore new arenas.",
-    image: 2
-}
+    title: "À propos de moi",
+
+    description1: "Je suis Ghofrane Hammedi, développeuse Full Stack spécialisée en Spring Boot et Angular. Titulaire d’une Licence en Sciences Informatiques, je maîtrise Java, Python, JavaScript, ainsi que HTML, CSS et Bootstrap.",
+
+    description2: "Passionnée, adaptable et motivée par les défis techniques, j’aime apprendre continuellement. En dehors du travail, j’apprécie la lecture, les voyages et la cuisine.",
+
+    image: 1 // ou 2 selon l'image que tu veux afficher
+};

@@ -8,13 +8,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 
-import {
-    FaTwitter,
-    FaLinkedin,
-    FaGithub,
-    FaYoutube,
-    FaBlogger,
-} from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaGithub, FaYoutube, FaBlogger } from 'react-icons/fa';
 
 function Landing() {
     const { theme, drawerOpen } = useContext(ThemeContext);
@@ -63,6 +57,15 @@ function Landing() {
                 display: 'none',
             },
         },
+        socialIcon: {
+            fontSize: '1.8rem',
+            marginRight: '10px',
+            cursor: 'pointer',
+            transition: '0.2s',
+            '&:hover': {
+                color: theme.primary,
+            },
+        },
     }));
 
     const classes = useStyles();
@@ -70,24 +73,13 @@ function Landing() {
     return (
         <div className='landing'>
             <div className='landing--container'>
+                {/* Partie gauche avec les icônes */}
                 <div
                     className='landing--container-left'
                     style={{ backgroundColor: theme.primary }}
                 >
                     <div className='lcl--content'>
-                        {socialsData.linkedIn && (
-                            <a
-                                href={socialsData.linkedIn}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaLinkedin
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='LinkedIn'
-                                />
-                            </a>
-                        )}
+                        {/* GitHub */}
                         {socialsData.github && (
                             <a
                                 href={socialsData.github}
@@ -95,12 +87,29 @@ function Landing() {
                                 rel='noreferrer'
                             >
                                 <FaGithub
-                                    className='landing--social'
+                                    className={classes.socialIcon}
                                     style={{ color: theme.secondary }}
                                     aria-label='GitHub'
                                 />
                             </a>
                         )}
+
+                        {/* LinkedIn */}
+                        {socialsData.linkedin && (
+                            <a
+                                href={socialsData.linkedin}
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <FaLinkedin
+                                    className={classes.socialIcon}
+                                    style={{ color: theme.secondary }}
+                                    aria-label='LinkedIn'
+                                />
+                            </a>
+                        )}
+
+                        {/* Autres réseaux */}
                         {socialsData.twitter && (
                             <a
                                 href={socialsData.twitter}
@@ -108,7 +117,7 @@ function Landing() {
                                 rel='noreferrer'
                             >
                                 <FaTwitter
-                                    className='landing--social'
+                                    className={classes.socialIcon}
                                     style={{ color: theme.secondary }}
                                     aria-label='Twitter'
                                 />
@@ -121,7 +130,7 @@ function Landing() {
                                 rel='noreferrer'
                             >
                                 <FaYoutube
-                                    className='landing--social'
+                                    className={classes.socialIcon}
                                     style={{ color: theme.secondary }}
                                     aria-label='YouTube'
                                 />
@@ -134,7 +143,7 @@ function Landing() {
                                 rel='noreferrer'
                             >
                                 <FaBlogger
-                                    className='landing--social'
+                                    className={classes.socialIcon}
                                     style={{ color: theme.secondary }}
                                     aria-label='Blogger'
                                 />
@@ -142,6 +151,8 @@ function Landing() {
                         )}
                     </div>
                 </div>
+
+                {/* Image principale */}
                 <img
                     src={headerData.image}
                     alt=''
@@ -151,6 +162,8 @@ function Landing() {
                         borderColor: theme.secondary,
                     }}
                 />
+
+                {/* Partie droite avec texte et boutons */}
                 <div
                     className='landing--container-right'
                     style={{ backgroundColor: theme.secondary }}
@@ -172,7 +185,7 @@ function Landing() {
                                     rel='noreferrer'
                                 >
                                     <Button className={classes.resumeBtn}>
-                                        Download CV
+                                        Télécharger CV
                                     </Button>
                                 </a>
                             )}
